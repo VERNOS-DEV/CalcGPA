@@ -1,0 +1,807 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    /* background-color: #fcfcfc; */
+}
+
+#cont1{
+    width: 100vw;
+    height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #fcfcfc;
+}
+
+#cont2 {
+    position: fixed;
+    top: 15%;
+    width: 50vw;
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid #d6d6e1;
+    margin: 1em auto;
+    border-radius: 0.8em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.resConatiner{
+    width: 100%;
+    /* border: 1px solid red; */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    /* position: fixed; */
+}
+
+#cont2 > h3 {
+    flex-basis: 100%;
+    text-align: center;
+    margin: 1em;
+    font-size: 1.2rem;
+}
+
+#cont2 > select {
+    flex-basis: 16%;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    margin: 0.5 em;
+    border: 2px solid #d6d6e1;
+}
+
+#cont2 > select:focus {
+    border-color: #5e5e8d;
+}
+
+#cont2 > button {
+    flex-basis: 100%;
+    margin: 1em;
+    background-color: #7d14e6;
+    color: #fcfcfc;
+    font-size: 1rem;
+    border: none;
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
+
+#cont2 > button:hover{
+  transform: translateY(-3px);
+
+}
+
+/* Table */
+
+/* #cont1 form{
+    width:80%;
+    margin:0 auto;
+    border: 2px solid #d6d6e1;
+
+} */
+
+#tble {
+    flex-basis: 90%;
+    /* display: flex; */
+    position: fixed;
+    top: 15%;
+    max-height: 80vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    gap:1em;
+    /* border: 2px solid #d6d6e1; */
+    border-radius: 0.8em;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+#tble .row{
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 10px;
+    border-radius: 0.8em;
+}
+
+.subhd{
+    flex-basis:59%;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.crehd{
+    flex-basis: 40%;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+
+}
+.inhd{
+    flex-basis: 40%;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.subs{
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding: 1em;
+    max-height: 55vh;
+    overflow:scroll;
+    /* border: 2px solid #d6d6e1; */
+    border-radius: 0.5em;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
+}
+
+.subs::-webkit-scrollbar {
+    display: none;
+}
+
+.subs .subrow{
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.subcont{
+    flex-basis: 60%;
+    justify-content: center;
+    /* text-align: center; */
+}
+
+.crecont{
+    flex-basis:40%;
+    text-align: center;
+}
+
+.incont{
+    flex-basis: 40%;
+    text-align: center;
+}
+
+.subrow input[type="number"]{
+    width:25em;
+    padding: 1em;
+    border: 2px solid #d6d6e1;
+    border-radius: 0.5em;
+    transition: all .3s ease;
+
+}
+
+.incont{
+    position:relative;
+}
+
+.subrow input[type="number"]:focus,
+.subrow input[type="number"]:valid
+{
+    border-color:#5e5e8d;
+}
+
+.incont label{
+    position:absolute;
+    cursor:text;
+    /* z-index:2; */
+    top:12px;
+    left:25px;
+    font-size:0.7rem;
+    font-weight: bold;
+    background-color: #fcfcfc;
+    padding: 0 10px;
+    color:#5e5e8d;
+    transition: all .3s ease;
+}
+
+.incont input[type="number"]:focus + label,
+.incont input[type="number"]:valid + label{
+    font-size: 0.8rem;
+    top:-8px
+}
+
+
+#calcbtn{
+    flex-basis: 15%;
+    font-size: 1rem;
+    /* border: none; */
+    padding: 0.5em;
+    border-radius: 0.5em;
+    color:#fcfcfc;
+    border: none;
+    background-color: #7d14e6;
+
+}
+#btnrow{
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+#rsetbtn{
+    flex-basis: 15%;
+    font-size: 1rem;
+    /* border: none; */
+    padding: 0.5em;
+    border-radius: 0.5em;
+    color:#181010;
+    border: none;
+    background-color: #d6d6e1;
+
+}
+
+#calcbtn:hover,#rsetbtn:hover{
+  transform: translateY(-3px);
+
+}
+
+/* Result */
+/* #rslt{
+    flex-basis: 90%;
+    max-height: 80vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    gap:1em;
+    border: 2px solid #d6d6e1;
+    border-radius: 0.8em;
+}
+
+.rsltrow{
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rsubhd{
+    flex-basis:59%;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.rcrehd{
+    flex-basis: 40%;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+
+}
+.mhd{
+    flex-basis: 40%;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.rsubs{
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding: 1em;
+    max-height: 55vh;
+    overflow:scroll;
+    border: 2px solid #d6d6e1;
+    border-radius: 0.5em;
+}
+
+.rsubs::-webkit-scrollbar {
+    display: none;
+}
+
+.rsubs .rsubrow{
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rsubcont{
+    flex-basis: 60%;
+    
+}
+
+.rcrecont{
+    flex-basis:40%;
+    text-align: center;
+}
+
+.mcont{
+    flex-basis: 40%;
+    text-align: center;
+}
+
+#dwldbtn{
+    flex-basis: 15%;
+    font-size: 1rem;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    color:#fcfcfc;
+    border: none;
+    background-color: #7d14e6;
+
+}
+
+#svbtn{
+    flex-basis: 15%;
+    font-size: 1rem;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    color:#181010;
+    border: none;
+    background-color: #d6d6e1;
+
+}
+
+#dwldbtn:hover,#svbtn:hover{
+  transform: translateY(-3px);
+
+} */
+
+@media (max-width:1536px) {}
+
+@media (max-width:1280px) {
+
+    #cont2 > select {
+        width: 17.6em;
+    }
+
+    /* Table */
+
+    .subhd{
+        flex-basis:52%;
+    }
+
+    .subrow label{
+        left:15px;
+    }
+}
+
+@media (max-width:1024px) {
+    #cont2 > select {
+        width: 9.3em;
+    }
+
+    /* Table */
+
+    .subhd{
+        flex-basis: 73%;
+    }
+
+    .crehd{
+        flex-basis: 38%;
+    }
+
+    .inhd{
+        flex-basis:60%;
+    }
+
+    .subrow input[type="number"]{
+        padding:0.5em;
+        width:20em;
+    }
+
+    .subrow label{
+        top:7px;
+        left:5px;
+        font-size:0.8rem;
+    }
+
+    .incont input[type="number"]:focus + label,
+    .incont input[type="number"]:valid + label{
+    font-size: 0.6rem;
+    top:-5px
+}
+
+    
+}
+
+@media (max-width:768px) {
+
+    #cont2 {
+        width: 52vw;
+    }
+
+    #cont2 > select {
+        width: 8em;
+
+    }
+
+    /* Table */
+
+    #tble{
+        flex-basis:95%;
+    }
+
+    .subhd{
+        flex-basis: 75%;
+        font-size: 1rem;
+    }
+
+    .crehd{
+        flex-basis:44%;
+        font-size: 1rem;
+    }
+
+    .inhd{
+        flex-basis: 60%;
+        font-size: 1rem;
+    }
+
+    .subs{
+        max-height: 60vh;
+    }
+
+    .subrow input[type="number"]{
+        padding:0.5em;
+        width:15em;
+    }
+
+    .subrow label{
+        top:7px;
+        left:5px;
+        font-size:0.8rem;
+    }
+
+    .incont input[type="number"]:focus + label,
+    .incont input[type="number"]:valid + label{
+    font-size: 0.6rem;
+    top:-5px
+    
+}
+
+    #calcbtn{
+        font-size: 0.8rem;
+        margin-top: 0.5em;
+    }
+
+    #rsetbtn{
+        font-size:0.8rem;
+        margin-top: 0.5em;
+
+    }
+}
+
+@media (max-width:640px) {
+    #cont2 {
+        width: 62vw;
+    }
+
+    #cont2 > select {
+        width: 7.5em
+    }
+
+    /* Table */
+    #tble{
+        height: 85vh;
+        margin-top: 0;
+        /* position: static; */
+        top: 10%;
+    }
+
+    .subhd{
+        flex-basis: 75%;
+        font-size: 1rem;
+    }
+
+    .crehd{
+        flex-basis:44%;
+        font-size: 1rem;
+    }
+
+    .inhd{
+        flex-basis: 60%;
+        font-size: 1rem;
+    }
+
+    .subs{
+        font-size:1rem;
+        max-height: 65vh;
+        overflow:scroll;
+        /* border: 2px solid #d6d6e1; */
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        top: 5%;
+    }
+
+    .subrow input[type="number"]{
+        padding:0.2em;
+        width:12em;
+    }
+
+    .subrow label{
+        top:7px;
+        left:8px;
+        font-size:0.6rem;
+    }
+
+    .incont input[type="number"]:focus + label,
+    .incont input[type="number"]:valid + label{
+    font-size: 0.5rem;
+    top:-5px
+}
+
+#calcbtn{
+    font-size: 1rem;
+    margin-top: 0em;
+}
+
+#rsetbtn{
+    font-size:1rem;
+    margin-top: 0em;
+
+}
+}
+
+@media (max-width:568px) {
+    #cont2 {
+        width: 88vw;
+    }
+
+    #cont2 > select {
+        flex-basis: 92.5%;
+        margin: 0.5em;
+    }
+
+    #cont2 > button {
+        width: 20em;
+    }
+    .resConatiner{
+        width: 100%;
+    }
+    /* Table */
+    .subhd{
+        flex-basis: 82%;
+        font-size: 1rem;
+        padding-left: 5px;
+    }
+    .crehd{
+        flex-basis:44%;
+        font-size: 1rem;
+    }
+
+    .inhd{
+        flex-basis: 60%;
+        font-size: 1rem;
+    }
+
+    .subs{
+        font-size:1rem;
+        height: 75%;
+        max-height: 65vh;
+        overflow:scroll;
+        /* border: 2px solid #d6d6e1; */
+    }
+
+    .subrow input[type="number"]{
+        padding:0.2em;
+        width:10em;
+    }
+
+    .subrow label{
+        top:7px;
+        left:8px;
+        font-size:0.6rem;
+    }
+
+    .incont input[type="number"]:focus + label,
+    .incont input[type="number"]:valid + label{
+    font-size: 0.5rem;
+    top:-5px
+}
+
+#calcbtn{
+    font-size: 1rem;
+    margin-top: 0.2em;
+}
+
+#rsetbtn{
+    font-size:1rem;
+    margin-top: 0.2em;
+
+}
+}
+
+@media (max-width:400px) {
+    #cont1{
+        height: 120vh;
+    }
+    #cont2 > select {
+        flex-basis: 90%;
+        margin: 0.5em;
+    }
+    #tble #titleRow{
+        padding: 0;
+    }
+    /* Table */
+   form  #titleRow{
+        display: none;
+        padding: 0;
+    }
+    form .row{
+        display: none;
+    }
+    
+    table{
+        position: relative;
+        bottom: -30px;
+    }
+    #tble{
+        padding: 5px;
+        /* margin-top: 2em; */
+        
+    }
+
+    .subhd{
+        display: none;
+    }
+
+    .crehd{
+       display: none;
+    }
+
+    .inhd{
+        display: none;
+    }
+
+    .subs{
+        font-size:1rem;
+        max-height: 60vh;
+        overflow:scroll;
+        /* border: 2px solid #d6d6e1; */
+    }
+
+    .subs .subrow{
+        flex-wrap: wrap;
+        gap: 0.5em;
+
+    }
+
+    .subcont{
+        flex-basis: 100%;
+    }
+
+    .crecont{
+        display: none;
+    }
+    .incont{
+        flex-basis: 100%;
+    }
+
+    .subrow input[type="number"]{
+        padding:0.2em;
+        width:40em;
+        height: 3.5em;
+        font-size: 0.5rem;
+    }
+
+    .subrow label{
+        top:8.5px;
+        left:5px;
+        font-size:0.6rem;
+    }
+
+    .incont input[type="number"]:focus + label,
+    .incont input[type="number"]:valid + label{
+    font-size: 0.6rem;
+    top:-3px;
+    left:18px;
+}
+
+#calcbtn{
+    font-size: 1rem;
+    margin-top: 0.2em;
+}
+
+#rsetbtn{
+    font-size:1rem;
+    margin-top: 0.2em;
+
+}
+
+}
+
+@media(max-width:328px){
+    
+       /* Table */
+
+       #tble{
+        padding: 1em;
+        margin-top:1em;
+        width: 85%;
+    }
+
+    .subhd{
+        display: none;
+    }
+
+    .crehd{
+       display: none;
+    }
+
+    .inhd{
+        display: none;
+    }
+
+    .subs{
+        font-size:0.8rem;
+        max-height: 65vh;
+        overflow:scroll;
+        border: 2px solid #d6d6e1;
+    }
+
+    .subs .subrow{
+        flex-wrap: wrap;
+        gap: 0.5em;
+
+    }
+
+    .subcont{
+        flex-basis: 100%;
+    }
+
+    .crecont{
+        display: none;
+    }
+
+    .incont{
+        flex-basis: 100%;
+    }
+
+    .subrow input[type="number"]{
+        padding:0.2em;
+        width:25em;
+        height: 3.5em;
+        font-size: 0.6rem;
+    }
+
+    .subrow label{
+        top:8.5px;
+        left:5px;
+        font-size:0.6rem;
+        background: transparent;
+    }
+
+    .incont input[type="number"]:focus + label,
+    .incont input[type="number"]:valid + label{
+    font-size: 0.5rem;
+    top:-3px;
+    left:12px;
+    background: #fcfcfc;
+}
+
+#calcbtn{
+    font-size: 0.8rem;
+    margin-top: 0.2em;
+    padding: 0.5em;
+}
+
+#rsetbtn{
+    font-size:0.8rem;
+    margin-top: 0.2em;
+    padding: 0.5em;
+
+}
+
+    
+}

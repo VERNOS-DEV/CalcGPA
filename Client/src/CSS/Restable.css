@@ -1,0 +1,113 @@
+.container_table{
+    /* padding: 0 50px; */
+    /* height: auto; */
+    width: 80%;
+    margin-top: 0px;
+    align-self: center;
+    text-align: center;
+    padding-top: 20px ;
+    padding: 10px;
+    height: 100%;
+    padding-bottom: 30px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    position: absolute;
+    top: 9%;
+    /* overflow: scroll; */
+    /* position: fixed; */
+    /* top: 5%; */
+}
+
+.detail_cont{
+   width: 100%;
+   padding: 20px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   font-weight: 600;
+}
+table{
+    /* position: static; */
+    margin-top: 0px;
+    text-align: center;
+    display: inline-block;
+    border-collapse: collapse;
+    border-radius: 25px;
+    /* padding: 20px; */
+    height: auto;
+    width: auto;
+    border: 2px solid rgb(197, 197, 197);
+    /* border: #a1a1a1; */
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+th{
+    padding: 20px;
+    /* border-bottom: 1px solid black; */
+    border-bottom: 2px solid rgb(109, 109, 109);
+    border-right: 2px solid rgb(109, 109, 109);
+}
+th:last-child{
+    border-right: 0px solid white;
+}
+td {
+    padding: 15px;
+    border-top: 1px solid rgb(147, 147, 147);
+}
+#sub{
+    border-right:1px solid rgb(147, 147, 147) ;
+}
+#cre{
+    border-right:1px solid rgb(147, 147, 147) ;
+}
+
+#marks{
+    border-right:1px solid rgb(147, 147, 147) ;
+}
+
+.empty{
+    border-top: 1px solid rgb(147, 147, 147);
+}
+.res{
+    border-top: 2px solid rgb(109, 109, 109);
+}
+.tm{
+    font-weight: 600;
+    border-right: 2px solid rgb(109, 109, 109)
+}
+.tm:last-child{
+    border-right: 0px solid white;
+}
+/* td:last-child{
+    border-bottom: 0px solid white;
+} */
+@media (max-width:450px){
+    .detail_cont{
+        padding-bottom: 0;
+    }
+    .container_table{
+        width: 100%;
+        /* position: fixed; */
+        top: 10%;
+        padding-top: 0;
+        padding-bottom: 60px;
+        box-shadow: 0 0 0 ;
+    }
+    table{
+        width: auto;
+        padding-top: 0;
+   }
+    table{
+        font-size: 13px;
+    }
+    th{
+        font-size: 13px;
+        padding: 2px;
+    }
+    td{
+        font-size: 13px;
+        padding: 2px;
+    }
+    .tm{
+        padding: 15px 0;
+    }
+}
+

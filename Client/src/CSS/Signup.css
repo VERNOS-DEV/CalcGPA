@@ -1,0 +1,206 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+}
+
+.signin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.signin-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.signin-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-box2 {
+    margin-bottom: 20px;
+}
+
+input[type="email"],
+ input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.signin-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #7d14e6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.signin-btn:hover {
+    /* background-color: #287ae6; */
+  transform: translateY(-3px);
+
+}
+/* Previous styles remain the same */
+
+.input-box2 {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.signin-container input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d6d6e1;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.signin-container label {
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    color: #ccc;
+    transition: top 0.3s, font-size 0.3s;
+    pointer-events: none;
+    font-size: 16px;
+}
+
+/* When input is focused or contains text */
+.signin-container > input[type="email"]:focus + label,
+input[type="password"]:focus + label,
+input[type="email"]:valid + label,
+input[type="password"]:valid + label {
+    top: -12px;
+    font-size: 12px;
+    color: #595f68;
+    background-color: white;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+/* For input focus or when text is entered */
+.signin-container > input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="email"]:not(:placeholder-shown),
+input[type="password"]:not(:placeholder-shown) {
+    border-color: #d6d6e1;
+    /* box-shadow: 0 0 8px rgba(26, 115, 232, 0.3); */
+}
+.links {
+    text-align: center;
+    font-size: 14px;
+   margin: 20px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #333;
+    
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+/* Previous styles remain the same */
+
+.input-box2 {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.signin-container  input[type="text"],
+.signin-container input[type="email"],
+.signin-container input[type="password"],
+.signin-container input[type="text"]:focus,
+.signin-container input[type="email"]:focus,
+.signin-container input[type="password"]:focus,
+.signin-container input[type="text"]:not(:placeholder-shown),
+.signin-container input[type="email"]:not(:placeholder-shown),
+.signin-container input[type="password"]:not(:placeholder-shown),
+.signin-container select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.signin-container select {
+    width: calc(100% - 20px); 
+    padding: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    appearance: none; 
+    background-image: url('data:image/svg+xml;utf8,<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z" /></svg>'); /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: calc(100% - 8px) center;
+}
+.input-box2 select
+{
+    width: 100%;
+}
+.signin-container label {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: #ccc;
+    transition: top 0.3s, font-size 0.3s;
+    pointer-events: none;
+    font-size: 16px;
+}
+
+/* When input is focused or contains text */
+.signin-container input[type="text"]:focus + label,
+.signin-container input[type="email"]:focus + label,
+.signin-container input[type="password"]:focus + label,
+.signin-container input[type="text"]:valid + label,
+.signin-container input[type="email"]:valid + label,
+.signin-container input[type="password"]:valid + label {
+    top: -12px;
+    font-size: 12px;
+    color: #595f68;
+    background-color: white;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+/* For input focus or when text is entered */
+.signin-container input[type="text"]:focus,
+.signin-container input[type="email"]:focus,
+.signin-container input[type="password"]:focus,
+.signin-container input[type="text"]:not(:placeholder-shown),
+.signin-container input[type="email"]:not(:placeholder-shown),
+.signin-container input[type="password"]:not(:placeholder-shown)
+ {
+    /* border-color: #d6d6e1; */
+    /* box-shadow: 0 0 8px rgba(26, 115, 232, 0.3); */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 480px) {
+    .login-box {
+        padding: 50px;
+        max-width: 300px;
+    }
+    .links a
+    {
+       padding: 20px;
+       line-height: 2.5;
+    }
+}
