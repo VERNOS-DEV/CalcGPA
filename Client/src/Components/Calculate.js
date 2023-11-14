@@ -104,7 +104,7 @@ const Calculate = () => {
     const totalCredits = credits.reduce((acc, credit) => acc + credit, 0);
     console.log("Total Credits:", totalCredits);
     setTotalCredits(totalCredits);
-    
+    console.log(totalCredits);
     // calSgpa();
     document.getElementById("tble").style.display = "none";
     document.getElementById("rslt").style.display = "flex";
