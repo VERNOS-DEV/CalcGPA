@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../CSS/Calculate.css";
 import ResTable from "./ResTable";
-
 const Calculate = () => {
   const [data, setData] = useState([]);
   const [branch, setBranch] = useState([]);
@@ -13,11 +12,12 @@ const Calculate = () => {
   const [sem, setSem] =useState();
   const [BranchName,setBranchName] = useState("")
   const [scheme,setScheme] = useState();
-  //http://localhost:4552/api/getScheme
+
+  const URL = process.env.API_KEY;
   try{
     useEffect(() => {
       const getSchema = async () => {
-        fetch("http://localhost:4552/api/getScheme")
+        fetch("https://calcgpa.onrender.com/api/getScheme")
           .then((response) => response.json())
           .then((data) => {
             setData(data);
@@ -30,7 +30,7 @@ const Calculate = () => {
   }catch(err){
     alert(err)
   }
-  
+  console.log(URL)
 
   useEffect(() => {
     setCredits(subjects.map((sub) => sub.credit));
