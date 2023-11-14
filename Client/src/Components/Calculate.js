@@ -17,7 +17,7 @@ const Calculate = () => {
   try{
     useEffect(() => {
       const getSchema = async () => {
-        fetch("https://calcgpa.onrender.com/api/getScheme")
+        fetch("https://vernos-calcgpa.onrender.com/api/getScheme")
           .then((response) => response.json())
           .then((data) => {
             setData(data);
