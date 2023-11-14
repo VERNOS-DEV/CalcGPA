@@ -13,6 +13,7 @@ const Calculate = () => {
   const [sem, setSem] =useState();
   const [BranchName,setBranchName] = useState("")
   const [scheme,setScheme] = useState();
+  //http://localhost:4552/api/getScheme
   try{
     useEffect(() => {
       const getSchema = async () => {
@@ -22,7 +23,7 @@ const Calculate = () => {
             setData(data);
             setBranch(data.data[0].Branch);
           });
-      };
+        };
       console.log(data)
       getSchema();
     }, []);
