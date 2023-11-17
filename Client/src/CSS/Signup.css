@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f1f1f1;
@@ -75,7 +80,7 @@ input[type="password"] {
     position: absolute;
     top: 8px;
     left: 12px;
-    color: #ccc;
+    color: #5e5e8d;
     transition: top 0.3s, font-size 0.3s;
     pointer-events: none;
     font-size: 16px;
@@ -88,7 +93,7 @@ input[type="email"]:valid + label,
 input[type="password"]:valid + label {
     top: -12px;
     font-size: 12px;
-    color: #595f68;
+    color: #5e5e8d;
     background-color: white;
     padding-left: 7px;
     padding-right: 7px;
@@ -146,20 +151,22 @@ input[type="password"]:not(:placeholder-shown) {
     padding: 10px; 
     border: 1px solid #ccc;
     border-radius: 5px;
+    color: #5e5e8d;
     appearance: none; 
     background-image: url('data:image/svg+xml;utf8,<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z" /></svg>'); /* Custom arrow */
     background-repeat: no-repeat;
     background-position: calc(100% - 8px) center;
 }
+
 .input-box2 select
 {
     width: 100%;
 }
 .signin-container label {
     position: absolute;
-    top: 12px;
+    top: 10px;
     left: 12px;
-    color: #ccc;
+    color: #5e5e8d;
     transition: top 0.3s, font-size 0.3s;
     pointer-events: none;
     font-size: 16px;

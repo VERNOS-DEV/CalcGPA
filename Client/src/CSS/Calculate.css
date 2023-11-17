@@ -2,12 +2,11 @@
 
 *{
     font-family: 'Poppins', sans-serif;
-    /* background-color: #fcfcfc; */
 }
 
 #cont1{
     width: 100vw;
-    height: 120vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,7 +16,7 @@
 
 #cont2 {
     position: fixed;
-    top: 15%;
+    top: 35%;
     width: 50vw;
     padding: 1em;
     display: flex;
@@ -75,12 +74,6 @@
 
 /* Table */
 
-/* #cont1 form{
-    width:80%;
-    margin:0 auto;
-    border: 2px solid #d6d6e1;
-
-} */
 
 #tble {
     flex-basis: 90%;
@@ -184,6 +177,18 @@
 
 }
 
+/* For Firefox */
+.subrow input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+/* Webkit browsers like Safari and Chrome */
+.subrow input[type=number]::-webkit-inner-spin-button,
+.subrow input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .incont{
     position:relative;
 }
@@ -198,19 +203,20 @@
     position:absolute;
     cursor:text;
     /* z-index:2; */
-    top:12px;
-    left:25px;
-    font-size:0.7rem;
+    top:14px;
+    left:45px;
+    font-size:0.8rem;
     font-weight: bold;
     background-color: #fcfcfc;
     padding: 0 10px;
     color:#5e5e8d;
+    pointer-events: none;
     transition: all .3s ease;
 }
 
 .incont input[type="number"]:focus + label,
 .incont input[type="number"]:valid + label{
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     top:-8px
 }
 
@@ -247,117 +253,7 @@
 
 }
 
-/* Result */
-/* #rslt{
-    flex-basis: 90%;
-    max-height: 80vh;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 2em;
-    gap:1em;
-    border: 2px solid #d6d6e1;
-    border-radius: 0.8em;
-}
 
-.rsltrow{
-    flex-basis: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.rsubhd{
-    flex-basis:59%;
-    font-size: 1.2rem;
-    text-align: center;
-    font-weight: bold;
-
-}
-
-.rcrehd{
-    flex-basis: 40%;
-    font-size: 1.2rem;
-    text-align: center;
-    font-weight: bold;
-
-}
-.mhd{
-    flex-basis: 40%;
-    font-size: 1.2rem;
-    text-align: center;
-    font-weight: bold;
-
-}
-
-.rsubs{
-    flex-basis: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 2em;
-    padding: 1em;
-    max-height: 55vh;
-    overflow:scroll;
-    border: 2px solid #d6d6e1;
-    border-radius: 0.5em;
-}
-
-.rsubs::-webkit-scrollbar {
-    display: none;
-}
-
-.rsubs .rsubrow{
-    flex-basis: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.rsubcont{
-    flex-basis: 60%;
-    
-}
-
-.rcrecont{
-    flex-basis:40%;
-    text-align: center;
-}
-
-.mcont{
-    flex-basis: 40%;
-    text-align: center;
-}
-
-#dwldbtn{
-    flex-basis: 15%;
-    font-size: 1rem;
-    padding: 0.5em;
-    border-radius: 0.5em;
-    color:#fcfcfc;
-    border: none;
-    background-color: #7d14e6;
-
-}
-
-#svbtn{
-    flex-basis: 15%;
-    font-size: 1rem;
-    padding: 0.5em;
-    border-radius: 0.5em;
-    color:#181010;
-    border: none;
-    background-color: #d6d6e1;
-
-}
-
-#dwldbtn:hover,#svbtn:hover{
-  transform: translateY(-3px);
-
-} */
 
 @media (max-width:1536px) {}
 
@@ -403,9 +299,9 @@
     }
 
     .subrow label{
-        top:7px;
+        top:9px;
         left:5px;
-        font-size:0.8rem;
+        font-size:0.7rem;
     }
 
     .incont input[type="number"]:focus + label,
@@ -450,7 +346,7 @@
     }
 
     .subs{
-        max-height: 60vh;
+        max-height: 55vh;
     }
 
     .subrow input[type="number"]{
@@ -459,9 +355,9 @@
     }
 
     .subrow label{
-        top:7px;
+        top:10px;
         left:5px;
-        font-size:0.8rem;
+        font-size:0.7rem;
     }
 
     .incont input[type="number"]:focus + label,
@@ -473,12 +369,10 @@
 
     #calcbtn{
         font-size: 0.8rem;
-        margin-top: 0.5em;
     }
 
     #rsetbtn{
         font-size:0.8rem;
-        margin-top: 0.5em;
 
     }
 }
@@ -516,8 +410,8 @@
     }
 
     .subs{
-        font-size:1rem;
-        max-height: 65vh;
+        font-size:0.8rem;
+        max-height: 55vh;
         overflow:scroll;
         /* border: 2px solid #d6d6e1; */
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -542,12 +436,12 @@
 }
 
 #calcbtn{
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin-top: 0em;
 }
 
 #rsetbtn{
-    font-size:1rem;
+    font-size:0.8rem;
     margin-top: 0em;
 
 }
@@ -586,7 +480,7 @@
     }
 
     .subs{
-        font-size:1rem;
+        font-size:0.8rem;
         height: 75%;
         max-height: 65vh;
         overflow:scroll;
@@ -611,20 +505,22 @@
 }
 
 #calcbtn{
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin-top: 0.2em;
 }
 
 #rsetbtn{
-    font-size:1rem;
+    font-size:0.8rem;
     margin-top: 0.2em;
 
 }
 }
 
-@media (max-width:400px) {
+/* Mobile view */
+
+@media (max-width:440px) {
     #cont1{
-        height: 120vh;
+        height: 100vh;
     }
     #cont2 > select {
         flex-basis: 90%;
@@ -632,6 +528,7 @@
     }
     #tble #titleRow{
         padding: 0;
+        display: none;
     }
     /* Table */
    form  #titleRow{
@@ -648,7 +545,11 @@
     }
     #tble{
         padding: 5px;
-        /* margin-top: 2em; */
+        width:95%;
+        max-height: 75vh;
+        margin-top: 1em;
+        gap: 1em;
+        align-content: center;
         
     }
 
@@ -665,8 +566,9 @@
     }
 
     .subs{
-        font-size:1rem;
+        font-size:0.8rem;
         max-height: 60vh;
+        flex-basis: 95%;
         overflow:scroll;
         /* border: 2px solid #d6d6e1; */
     }
@@ -690,13 +592,13 @@
 
     .subrow input[type="number"]{
         padding:0.2em;
-        width:40em;
+        width:45em;
         height: 3.5em;
         font-size: 0.5rem;
     }
 
     .subrow label{
-        top:8.5px;
+        top:7px;
         left:5px;
         font-size:0.6rem;
     }
@@ -708,100 +610,292 @@
     left:18px;
 }
 
-#calcbtn{
-    font-size: 1rem;
-    margin-top: 0.2em;
-}
-
-#rsetbtn{
-    font-size:1rem;
-    margin-top: 0.2em;
+#tble .row{
+    flex-basis: 95%;
 
 }
 
-}
-
-@media(max-width:328px){
-    
-       /* Table */
-
-       #tble{
-        padding: 1em;
-        margin-top:1em;
-        width: 85%;
-    }
-
-    .subhd{
-        display: none;
-    }
-
-    .crehd{
-       display: none;
-    }
-
-    .inhd{
-        display: none;
-    }
-
-    .subs{
-        font-size:0.8rem;
-        max-height: 65vh;
-        overflow:scroll;
-        border: 2px solid #d6d6e1;
-    }
-
-    .subs .subrow{
-        flex-wrap: wrap;
-        gap: 0.5em;
-
-    }
-
-    .subcont{
-        flex-basis: 100%;
-    }
-
-    .crecont{
-        display: none;
-    }
-
-    .incont{
-        flex-basis: 100%;
-    }
-
-    .subrow input[type="number"]{
-        padding:0.2em;
-        width:25em;
-        height: 3.5em;
-        font-size: 0.6rem;
-    }
-
-    .subrow label{
-        top:8.5px;
-        left:5px;
-        font-size:0.6rem;
-        background: transparent;
-    }
-
-    .incont input[type="number"]:focus + label,
-    .incont input[type="number"]:valid + label{
-    font-size: 0.5rem;
-    top:-3px;
-    left:12px;
-    background: #fcfcfc;
+#btnrow{
+    margin:0;
 }
 
 #calcbtn{
     font-size: 0.8rem;
-    margin-top: 0.2em;
-    padding: 0.5em;
 }
 
 #rsetbtn{
     font-size:0.8rem;
-    margin-top: 0.2em;
-    padding: 0.5em;
 
 }
 
+}
+
+@media(max-width:420px){
+    
+/* Table */
+#tble{
+    padding: 5px;
+    width:95%;
+    max-height: 75vh;
+    margin-top: 1em;
+    gap: 1em;
+    align-content: center;
     
 }
+
+.subhd{
+    display: none;
+}
+
+.crehd{
+   display: none;
+}
+
+.inhd{
+    display: none;
+}
+
+.subs{
+    font-size:0.7rem;
+    max-height: 60vh;
+    flex-basis: 95%;
+    overflow:scroll;
+    /* border: 2px solid #d6d6e1; */
+}
+
+.subs .subrow{
+    flex-wrap: wrap;
+    gap: 0.5em;
+
+}
+
+.subcont{
+    flex-basis: 100%;
+}
+
+.crecont{
+    display: none;
+}
+.incont{
+    flex-basis: 100%;
+}
+
+.subrow input[type="number"]{
+    padding:0.2em;
+    width:40em;
+    height: 3.5em;
+    font-size: 0.5rem;
+}
+
+.subrow label{
+    top:8px;
+    left:6px;
+    font-size:0.5rem;
+}
+
+.incont input[type="number"]:focus + label,
+.incont input[type="number"]:valid + label{
+font-size: 0.5rem;
+top:-3px;
+left:18px;
+}
+
+#tble .row{
+flex-basis: 95%;
+
+}
+
+#btnrow{
+margin:0;
+}
+
+#calcbtn{
+font-size: 0.7rem;
+}
+
+#rsetbtn{
+font-size:0.7rem;
+
+}
+    
+}
+
+@media(max-width:380px){
+    
+/* Table */
+#tble{
+    padding: 5px;
+    width:95%;
+    max-height: 75vh;
+    margin-top: 1em;
+    gap: 1em;
+    align-content: center;
+    
+}
+
+.subhd{
+    display: none;
+}
+
+.crehd{
+   display: none;
+}
+
+.inhd{
+    display: none;
+}
+
+.subs{
+    font-size:0.7rem;
+    max-height: 60vh;
+    flex-basis: 95%;
+    overflow:scroll;
+    /* border: 2px solid #d6d6e1; */
+}
+
+.subs .subrow{
+    flex-wrap: wrap;
+    gap: 0.5em;
+
+}
+
+.subcont{
+    flex-basis: 100%;
+}
+
+.crecont{
+    display: none;
+}
+.incont{
+    flex-basis: 100%;
+}
+
+.subrow input[type="number"]{
+    padding:0.2em;
+    width:38em;
+    height: 3.5em;
+    font-size: 0.5rem;
+}
+
+.subrow label{
+    top:8px;
+    left:6px;
+    font-size:0.5rem;
+}
+
+.incont input[type="number"]:focus + label,
+.incont input[type="number"]:valid + label{
+font-size: 0.5rem;
+top:-3px;
+left:18px;
+}
+
+#tble .row{
+flex-basis: 95%;
+
+}
+
+#btnrow{
+margin:0;
+}
+
+#calcbtn{
+font-size: 0.7rem;
+}
+
+#rsetbtn{
+font-size:0.7rem;
+
+}
+    
+}
+
+@media(max-width:368px){
+    
+    /* Table */
+    #tble{
+        padding: 5px;
+        width:95%;
+        max-height: 75vh;
+        margin-top: 1em;
+        gap: 1em;
+        align-content: center;
+        
+    }
+    
+    .subhd{
+        display: none;
+    }
+    
+    .crehd{
+       display: none;
+    }
+    
+    .inhd{
+        display: none;
+    }
+    
+    .subs{
+        font-size:0.6rem;
+        max-height: 60vh;
+        flex-basis: 95%;
+        overflow:scroll;
+        /* border: 2px solid #d6d6e1; */
+    }
+    
+    .subs .subrow{
+        flex-wrap: wrap;
+        gap: 0.5em;
+    
+    }
+    
+    .subcont{
+        flex-basis: 100%;
+    }
+    
+    .crecont{
+        display: none;
+    }
+    .incont{
+        flex-basis: 100%;
+    }
+    
+    .subrow input[type="number"]{
+        padding:0.2em;
+        width:34em;
+        height: 3.5em;
+        font-size: 0.5rem;
+    }
+    
+    .subrow label{
+        top:8px;
+        left:6px;
+        font-size:0.5rem;
+    }
+    
+    .incont input[type="number"]:focus + label,
+    .incont input[type="number"]:valid + label{
+    font-size: 0.5rem;
+    top:-3px;
+    left:18px;
+    }
+    
+    #tble .row{
+    flex-basis: 95%;
+    
+    }
+    
+    #btnrow{
+    margin:0;
+    }
+    
+    #calcbtn{
+    font-size: 0.7rem;
+    }
+    
+    #rsetbtn{
+    font-size:0.7rem;
+    
+    }
+        
+    }
