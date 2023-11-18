@@ -162,6 +162,7 @@ input[type="password"]:not(:placeholder-shown) {
 {
     width: 100%;
 }
+
 .signin-container label {
     position: absolute;
     top: 10px;
