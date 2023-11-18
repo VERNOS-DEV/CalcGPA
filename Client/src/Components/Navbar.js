@@ -29,16 +29,16 @@ const Navbar = () => {
                 <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
               </svg>
             </li>
-            <li>
+            <li onClick={c}>
               <Link to="/">Home</Link>
             </li>
-            <li>
+            <li onClick={c}>
               <Link to="/Calculate">Calculate</Link>
             </li>
-            <li>
+            <li onClick={c}>
               <Link to="/Login">Login</Link>
             </li>
-            <li>
+            <li onClick={c}>
               <Link to="/About">About</Link>
             </li>
           </ul>
