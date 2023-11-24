@@ -64,12 +64,10 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
 }
-.grid-item-1 {
-  margin-top: 5rem;
-  margin-left: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+div.grid-item-1 {
+  padding-top: 5rem;
+  padding-left: 1.5rem;
+  text-align: justify;
 }
 .main-heading {
   font-weight: 300;
@@ -87,11 +85,12 @@ body {
     color: rgba(23, 23, 23, 0.925);
     /* line-height: 55px;  */
 }
-.info-text {
+p.info-text {
   margin: 1em auto 1em auto;
   font-size: 1.2rem;
   /* line-height: 28px; */
   color: #334157;
+  padding: 15px 19px;
   text-align: justify;
 }
 .btn_wrapper {
@@ -167,7 +166,20 @@ body {
   padding: 1rem;
 }
 .grid-col-item {
-  height: 100%;
+  height: 200px;
+  width: 480px;
+  /* border: 2px solid red; */
+  box-shadow: 0px 2px 10px  grey ;
+  border-radius: 10px;
+  justify-content: center;
+  padding: 25px 50px;
+  transition: 0.4s;
+}
+.grid-col-item:hover{
+  transform: translateY(-5px);
+  box-shadow: 0px 2px 6px  grey ;
+
+  
 }
 .icon {
   width: 100%;
@@ -196,6 +208,7 @@ body {
   color: #334157;
   line-height: 25px;
   font-size: 15.5px;
+  text-align: center;
 }
 footer {
   width: 100%;
@@ -268,5 +281,9 @@ footer {
   .team_img_wrapper {
     width: 350px;
     height: 350px;
+  }
+  div.grid-col-item{
+    width: auto;
+    height: auto;
   }
 }
