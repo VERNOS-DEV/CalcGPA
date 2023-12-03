@@ -181,7 +181,11 @@
  
    @media (max-width: 440px) {
 
-
+    .Desktop{
+        display:none;
+    }
+        
+       
     .Acontainer{
         display: none;
         height: 0;
