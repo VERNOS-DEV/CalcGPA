@@ -617,13 +617,20 @@
 
 #btnrow{
     margin:0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.4em;
 }
 
+
 #calcbtn{
+    width: 28em;
     font-size: 0.8rem;
 }
 
 #rsetbtn{
+    width: 28em;
     font-size:0.8rem;
 
 }
@@ -682,7 +689,7 @@
 
 .subrow input[type="number"]{
     padding:0.2em;
-    width:40em;
+    width:43em;
     height: 3.5em;
     font-size: 0.5rem;
 }
@@ -710,10 +717,12 @@ margin:0;
 }
 
 #calcbtn{
+width:30em;
 font-size: 0.7rem;
 }
 
 #rsetbtn{
+width: 30em;
 font-size:0.7rem;
 
 }

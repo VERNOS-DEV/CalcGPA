@@ -175,11 +175,11 @@ const Calculate = () => {
             })}
           </div>
           <div className="row" id="btnrow">
-            <button onClick={handleSubmit} id="calcbtn" type="submit">
-              Calculate
-            </button>
             <button id="rsetbtn" type="reset">
               Reset
+            </button>
+            <button onClick={handleSubmit} id="calcbtn" type="submit">
+              Calculate
             </button>
           </div>
         </form>
