@@ -18,7 +18,7 @@
         .left{
             width: 40%;
             height: 500px;
-            background-color: #f9f9f9;
+            margin-top: -5px;
             /* border: 2px solid black; */
         }
         .right{
@@ -27,7 +27,6 @@
             margin-top: 5em;
             width: 50%;
             height: 500px;
-
             text-align: center;
 
 
@@ -40,8 +39,8 @@
   background: #7d14e6;
   display: block;
   position: absolute;
-  top: 28%;
-  left: 53%;
+  top: 35%;
+  left: 54%;
 }
 
 .right:after{
@@ -52,31 +51,31 @@
   background: #7d14e6;
   display: block;
   position: absolute;
-  top: 28%;
-  right: 9%;
+  top: 35%;
+  right: 7.7%;
 }
 
 .motive:before{
   content:" ";
-  height: 2px;
+  height: 2.5px;
   width: 130px;
   background: #7d14e6;
   display: block;
   position: absolute;
-  top: 105%;
-  left: 26%;
+  top: 114%;
+  left: 27.5%;
 
 }
 
 .motive:after{
   margin-left: -200px;
   content:" ";
-  height: 2px;
+  height: 2.5px;
   width: 130px;
   background: #7d14e6;
   display: block;
   position: absolute;
-  top: 105%;
+  top: 114%;
   right: 26%;
 
 }
@@ -143,6 +142,7 @@
     color: #7d14e6;
     font-size: 3em;
     text-align: center;
+    padding-top:2.5% ;
     margin-top: 2.188 em;
     }
 
@@ -156,9 +156,10 @@
         /* line-height: 1.5; */
         margin-bottom: 0.5em;
         color: #666;
-        padding-top: 20px;
+        padding-top: 3.5%;
         justify-content: center;
         text-align: justify;
+        line-height: 170%;
         
     }
 
@@ -169,8 +170,10 @@
     ul.motive-adjust p{
         /* line-height: -5;
         margin: -10px; */
+        padding-top: 3%;
         font-size: 1.3rem;
         margin-top: -1em;
+        line-height: 65%;
         
     }
 
@@ -266,7 +269,7 @@
 }
 
 .top3{
-    margin-top: 1px;
+    margin-top: 5px;
     /* border: 1px solid black; */
     font-size: 17px;
     text-align: justify;
@@ -280,7 +283,7 @@
 .top4{
     /* border: 2px solid black ; */
     text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 20px;
     color: #7d14e6;
 }
@@ -290,6 +293,7 @@
 
 .top5{
     /* border: 1px solid black; */
+    margin-top: 20px;
     line-height: 22.2px;
     font-size: 17px;
     text-align: justify;
@@ -306,8 +310,12 @@
     text-align: justify;
     font-family: "Poppins", sans-serif;
      color: #666;
-    margin-top: -25px;
+    /* margin-top: -25px; */
     margin-left: 1em;
+}
+
+.motive-adjust2 {
+    line-height: 140%;
 }
 
 .p2{
@@ -450,12 +458,12 @@
     text-align: justify;
     font-family: "Poppins", sans-serif;
      color: #666;
-    margin-top: -25px;
+    margin-top: -15px;
 }
 
 .top2 img{
-  width: 380px;
-  margin-left: 8px;
+  width: 350px;
+  margin-left: 3px;
 }
 
 .underline1{

@@ -1,6 +1,6 @@
 import React from "react";
 import "../CSS/About.css";
-import Illus from "./veri.jpg";
+import Illus from "./veri1.png";
 
 const About = () => {
   return (
