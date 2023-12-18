@@ -546,7 +546,7 @@
     #tble{
         padding: 5px;
         width:95%;
-        max-height: 75vh;
+        max-height: 85vh;
         margin-top: 1em;
         gap: 1em;
         align-content: center;
@@ -643,7 +643,7 @@
 #tble{
     padding: 5px;
     width:95%;
-    max-height: 75vh;
+    max-height: 85vh;
     margin-top: 1em;
     gap: 1em;
     align-content: center;
@@ -729,13 +729,105 @@ font-size:0.7rem;
     
 }
 
+@media(max-width:400px){
+    
+    /* Table */
+    #tble{
+        padding: 5px;
+        width:95%;
+        max-height: 85vh;
+        margin-top: 1em;
+        gap: 1em;
+        align-content: center;
+        
+    }
+    
+    .subhd{
+        display: none;
+    }
+    
+    .crehd{
+       display: none;
+    }
+    
+    .inhd{
+        display: none;
+    }
+    
+    .subs{
+        font-size:0.7rem;
+        max-height: 60vh;
+        flex-basis: 95%;
+        overflow:scroll;
+        /* border: 2px solid #d6d6e1; */
+    }
+    
+    .subs .subrow{
+        flex-wrap: wrap;
+        gap: 0.5em;
+    
+    }
+    
+    .subcont{
+        flex-basis: 100%;
+    }
+    
+    .crecont{
+        display: none;
+    }
+    .incont{
+        flex-basis: 100%;
+    }
+    
+    .subrow input[type="number"]{
+        padding:0.2em;
+        width:40em;
+        height: 3.5em;
+        font-size: 0.5rem;
+    }
+    
+    .subrow label{
+        top:8px;
+        left:6px;
+        font-size:0.5rem;
+    }
+    
+    .incont input[type="number"]:focus + label,
+    .incont input[type="number"]:valid + label{
+    font-size: 0.5rem;
+    top:-3px;
+    left:18px;
+    }
+    
+    #tble .row{
+    flex-basis: 95%;
+    
+    }
+    
+    #btnrow{
+    margin:0;
+    }
+    
+    #calcbtn{
+    font-size: 0.7rem;
+    width:28em;
+    }
+    
+    #rsetbtn{
+    font-size:0.7rem;
+    width:28em;
+    
+    }
+        
+    }
+
 @media(max-width:380px){
     
 /* Table */
 #tble{
     padding: 5px;
     width:95%;
-    max-height: 75vh;
+    max-height: 85vh;
     margin-top: 1em;
     gap: 1em;
     align-content: center;
@@ -810,10 +902,12 @@ margin:0;
 
 #calcbtn{
 font-size: 0.7rem;
+width:28em;
 }
 
 #rsetbtn{
 font-size:0.7rem;
+width:28em;
 
 }
     
@@ -825,7 +919,7 @@ font-size:0.7rem;
     #tble{
         padding: 5px;
         width:95%;
-        max-height: 75vh;
+        max-height: 85vh;
         margin-top: 1em;
         gap: 1em;
         align-content: center;
@@ -871,7 +965,7 @@ font-size:0.7rem;
     
     .subrow input[type="number"]{
         padding:0.2em;
-        width:34em;
+        width:38em;
         height: 3.5em;
         font-size: 0.5rem;
     }
@@ -900,10 +994,12 @@ font-size:0.7rem;
     
     #calcbtn{
     font-size: 0.7rem;
+    width:27em;
     }
     
     #rsetbtn{
     font-size:0.7rem;
+    width:27em;
     
     }
         
