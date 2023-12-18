@@ -53,6 +53,7 @@ body {
   padding-top: 1rem;
   margin-bottom: 5rem;
   box-shadow: 0 0 0;
+  height: 100%;
 }
 #bottom_wrapper{
   padding-top: 0;
@@ -64,7 +65,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
 }
-div.grid-item-1 {
+.grid-item-1 {
   padding-top: 5rem;
   padding-left: 1.5rem;
   text-align: justify;
@@ -91,7 +92,7 @@ p.info-text {
   /* line-height: 28px; */
   color: #334157;
   padding: 15px 19px;
-  text-align: justify;
+  text-align: center;
 }
 .btn_wrapper {
   /* margin-top: 3.5rem; */
@@ -156,6 +157,9 @@ p.info-text {
   height: 100%;
   object-fit: contain;
 }
+.section.wrapper{
+  height: 100%;
+}
 .grid-cols-3 {
   width: 100%;
   height: 100%;
@@ -184,6 +188,7 @@ p.info-text {
 .icon {
   width: 100%;
   line-height: 40px;
+  text-align: center;
 }
 .icon svg {
   width: 30px;
@@ -254,6 +259,7 @@ footer {
     align-items: center;
     justify-content: center;
     padding-top: 0;
+    padding-left: 0;
   }
   .main-heading {
     font-size: 32px;
