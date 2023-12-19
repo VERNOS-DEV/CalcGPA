@@ -113,6 +113,8 @@ input[type="password"] {
     text-align: center;
     font-size: 14px;
    margin: 20px;
+   display: flex;
+   flex-direction: row;
 }
 
 .links a {
@@ -130,9 +132,13 @@ input[type="password"] {
         padding: 50px;
         max-width: 300px;
     }
+    .links{
+        display: flex;
+        flex-direction: column;
+      
+    }
     .links a
     {
-       padding: 20px;
-       line-height: 2.5;
+       line-height: 2;
     }
 }
