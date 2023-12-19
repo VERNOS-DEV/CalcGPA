@@ -1,6 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf'
 import "../CSS/Restable.css";
 const ResTable = ({ subjects, marks, credits, sem, branch, scheme }) => {
+
+  // useRef if used to download the result
+  
   const [totalMarks, setTotalMarks] = useState(0);
   const [sgpa, setSgpa] = useState(0);
   const [obtainedCredit, setObtainedCredit] = useState([]);
@@ -46,7 +51,7 @@ const ResTable = ({ subjects, marks, credits, sem, branch, scheme }) => {
     }
     setObtainedCredit(gmarks.map((s, i) => credits[i] * gmarks[i]));
     const finalSgpa = (gpa / tgpa).toFixed(3);
-
+    
     setSgpa(finalSgpa);
     setSgpa(finalSgpa);
     setSgpa(finalSgpa);
@@ -59,9 +64,38 @@ const ResTable = ({ subjects, marks, credits, sem, branch, scheme }) => {
     console.log("Updated sgpa:", sgpa);
     console.log("Obtained Credits:", obtainedCredit);
   }, [sgpa, obtainedCredit]);
+  
+  //Download button for downloading resluts
+  const [generatingPDF, setGeneratingPDF] = useState(false);
+  const pdfRef = useRef();
+  const downloadPDF = () =>{
+      const input = pdfRef.current;
+      html2canvas(input, {
+        onclone: (clonedDoc) => {
+          const downloadButton = clonedDoc.querySelector(".Download-btn");
+          if (downloadButton) {
+            downloadButton.style.display = "none"; // Hide the button in the cloned content
+          }
+        },
+      }).then((canvas) => {
+      const resImg = canvas.toDataURL('image/png');
+      const pdf = new jsPDF('p', 'mm', 'a4', true);
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = pdf.internal.pageSize.getHeight();
+      const imgWidth = canvas.width;
+      const imgHeight = canvas.height;
+      const ratio = Math.min(pdfWidth/imgWidth, pdfHeight/imgHeight);
+      const imgX = (pdfWidth - imgWidth*ratio)/2;
+      const imgY = 30;
+      pdf.addImage(resImg, 'PNG', imgX, imgY, imgWidth*ratio, imgHeight*ratio);
+      pdf.save('Result.pdf');
+    });
+  };
+
   return (
     <>
-      <div className="container_table">
+      
+      <div className="container_table" ref={pdfRef}>
         <div className="detail_cont">
           <div className="Branch">Branch : {branch}</div>
           <div className="sem">Semester : {sem}</div>
@@ -109,6 +143,15 @@ const ResTable = ({ subjects, marks, credits, sem, branch, scheme }) => {
             </tr>
           </tbody>
         </table>
+      <div className="download_btn_container">
+        {/* <button className="Download-btn" onClick={downloadPDF}>Download Result</button> */}
+
+        {!generatingPDF && (
+            <button className="Download-btn" onClick={downloadPDF}>
+              Download
+            </button>
+          )}
+      </div>
       </div>
     </>
   );

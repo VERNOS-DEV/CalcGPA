@@ -24,13 +24,13 @@ const Calculate = () => {
             setBranch(data.data[0].Branch);
           });
       };
-      console.log(data);
+      //console.log(data);
       getSchema();
     }, [data]);
   } catch (err) {
     alert(err);
   }
-  console.log(URL);
+  //console.log(URL);
 
   useEffect(() => {
     setCredits(subjects.map((sub) => sub.credit));
@@ -67,7 +67,7 @@ const Calculate = () => {
     }
   };
 
-  console.log(credits);
+  //console.log(credits);
 
   const handleInputChange = (index, value) => {
     try {
@@ -84,7 +84,7 @@ const Calculate = () => {
     }
   };
 
-  console.log(marks);
+  //console.log(marks);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -106,7 +106,7 @@ const Calculate = () => {
     document.getElementById("rslt").style.display = "flex";
   };
 
-  console.log(BranchName);
+  //console.log(BranchName);
 
   // Disabling input spinners
   const preventScroll = (e) => {

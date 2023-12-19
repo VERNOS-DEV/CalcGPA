@@ -2,11 +2,12 @@
 
 *{
     font-family: 'Poppins', sans-serif;
+    
 }
 
 #cont1{
     width: 100vw;
-    height: 100vh;
+    height: 115vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,9 +32,10 @@
 .resConatiner{
     width: 100%;
     /* border: 1px solid red; */
-    height: auto;
+    height: 140%;
     display: flex;
     justify-content: center;
+    background-color: #fcfcfc
     /* position: fixed; */
 }
 
