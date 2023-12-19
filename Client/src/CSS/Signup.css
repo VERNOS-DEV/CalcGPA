@@ -188,17 +188,6 @@ input[type="password"]:not(:placeholder-shown) {
     padding-right: 7px;
 }
 
-/* For input focus or when text is entered */
-.signin-container input[type="text"]:focus,
-.signin-container input[type="email"]:focus,
-.signin-container input[type="password"]:focus,
-.signin-container input[type="text"]:not(:placeholder-shown),
-.signin-container input[type="email"]:not(:placeholder-shown),
-.signin-container input[type="password"]:not(:placeholder-shown)
- {
-    /* border-color: #d6d6e1; */
-    /* box-shadow: 0 0 8px rgba(26, 115, 232, 0.3); */
-}
 
 /* Media queries for responsiveness */
 @media (max-width: 480px) {
