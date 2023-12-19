@@ -202,9 +202,9 @@ input[type="password"]:not(:placeholder-shown) {
 
 /* Media queries for responsiveness */
 @media (max-width: 480px) {
-    .login-box {
-        padding: 50px;
-        max-width: 300px;
+    .signin-box {
+        padding: 30px;
+        max-width: 350px;
     }
     .links a
     {
