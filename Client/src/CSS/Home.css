@@ -51,12 +51,13 @@ body {
   padding-left: 1.7rem;
   padding-right: 1.7rem;
   padding-top: 1rem;
-  margin-bottom: 15rem;
+  margin-top: px;
   box-shadow: 0 0 0;
   
 }
 #bottom_wrapper{
   padding-top: 0;
+  margin-top: -15px;
 }
 .grid-cols-2 {
   width: 100%;
@@ -90,15 +91,14 @@ p.info-text {
   /* margin: 1em auto 1em auto; */
   font-size: 1.2rem;
   color: #334157;
-  padding: 20px 17px;
-  text-align: center;
-  margin-right: 20px; 
+  /* padding: 20px 17px; */
+  text-align:left;
+  /* margin-left: 20px;  */
   margin-top: 20px;
 }
 .btn_wrapper {
   margin-top: 1.5rem;
   width: 100%;
-  margin-left: 200px;
 }
 .btnn {
   width: 110px;
@@ -175,7 +175,7 @@ p.info-text {
   box-shadow: 0px 2px 10px  grey ;
   border-radius: 10px;
   justify-content: center;
-  padding: 25px 50px;
+  padding: 20px 30px;
   transition: 0.4s;
 }
 .grid-col-item:hover{
