@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json())
 app.use(cors())
 dotenv.config()
-const port = process.env.PORT || 4552
+const port = process.env.PORT || 10000
 // app.use("/api",addBranch )
 app.use("/api",addScheme)
 app.use('/api',getSchema)

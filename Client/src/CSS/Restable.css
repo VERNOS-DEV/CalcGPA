@@ -126,7 +126,7 @@ td {
         padding-bottom: 60px;
         box-shadow: 0 0 0 ;
         padding: 0 10px;
-        height: 100%;
+        height: 120%;
     }
     table{
         width: auto;
@@ -151,6 +151,7 @@ td {
         top: 25px;
     }
     .download_btn_container{
+        position: sticky;
         box-shadow: 0 0 0;
     }
 }
