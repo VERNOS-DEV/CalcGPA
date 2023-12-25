@@ -46,12 +46,12 @@
 .right:after{
     margin-left: -200px;
   content:" ";
-  height: 2px;
+  height: 2.5px;
   width: 130px;
   background: #7d14e6;
   display: block;
   position: absolute;
-  top: 35%;
+  top: 35.4%;
   right: 7.7%;
 }
 
@@ -75,7 +75,7 @@
   background: #7d14e6;
   display: block;
   position: absolute;
-  top: 114%;
+  top: 114.7%;
   right: 26%;
 
 }
@@ -124,7 +124,7 @@
         margin-top: 0%;
         width: 100%;
         height: 650px;
-        border: 2px solid #7d14e6;
+        /* border: 2px solid #7d14e6; */
         align-items: center;
         justify-content: space-around;
         padding: 75px ;
@@ -177,7 +177,10 @@
         
     }
 
-
+    #hrtag hr{
+        border :1px solid #7d14e6;
+          
+    }
    /* Your existing CSS styles for larger screens */
 
  
@@ -212,7 +215,7 @@
       display: none;
     }
 
-   
+
 
     .motive{display: none;}
     .motive:after{display: none;}
