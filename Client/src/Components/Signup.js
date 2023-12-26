@@ -116,6 +116,7 @@
                   <option value={2018}>2018</option>
                 </select>
                 <label for="scheme"></label>
+                {errors.scheme && <span className="error-msg">{errors.scheme}</span>}
               </div>
               <div class="input-box2">
                 <select name="branch" id="branch" onChange={handleChange}>
@@ -128,6 +129,7 @@
                   <option value="Civil Engineering">Civil Engineering</option>
                 </select>
                 <label for="branch"></label>
+                {errors.branch && <span className="error-msg">{errors.branch}</span>}
               </div>
               <div class="input-box2">
                 <input 
