@@ -172,7 +172,10 @@ input[type="password"]:not(:placeholder-shown) {
     pointer-events: none;
     font-size: 16px;
 }
-
+.input-box2 span{
+    font-size: 12px;
+    color: red;
+}
 /* When input is focused or contains text */
 .signin-container input[type="text"]:focus + label,
 .signin-container input[type="email"]:focus + label,
