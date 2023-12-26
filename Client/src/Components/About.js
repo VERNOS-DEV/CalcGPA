@@ -23,6 +23,8 @@ const About = () => {
           </div>
         </div>
 
+        <div id="hrtag"><hr/></div>
+
         <div className="cont3">
           <div className="motive">
             <h2>Team's Motive:</h2>
