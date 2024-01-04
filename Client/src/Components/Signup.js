@@ -15,6 +15,8 @@
     });
 
     const [errors, SetErrors] = useState({})
+    const [msg, setMsg] = useState('');
+    const [loading, setLoading] = useState(false);
 
     const handleChange = (e) => {
       const {name, value} =e.target
@@ -54,24 +56,39 @@
       if(Object.keys(validationErrors)===0){
         alert("Form Submitted successfully");
       }
-      console.log(formData);
+      // console.log(formData);
       const temp = JSON.stringify({formData})
-      console.log(temp)
-      // https://vernos-calcgpa.onrender.com/api/registerUser
-      // const response = await fetch('http://localhost:4552/api/registerUser',{
-      //       method: 'POST',
-      //       headers:{
-      //           'Content-Type':'application/json'
-      //       },
-      //       body: JSON.stringify({
-      //           formData,
-      //       })
-      //   })
-      //   const data = await response.json()
-      //   console.log(data)
+      // console.log(temp)
+      setLoading(true);
+      //https://vernos-calcgpa.onrender.com/api/registerUser
+      const response = await fetch('https://vernos-calcgpa.onrender.com/api/registerUser',{
+            method: 'POST',
+            headers:{
+                'Content-Type':'application/json'
+            },
+            body: JSON.stringify({
+                name:formData.name,
+                email:formData.email,
+                usn: formData.usn,
+                password: formData.password,
+                branch: formData.branch,
+                scheme: formData.scheme
+
+            })
+        })
+        const data = await response.json()
+        if(data){
+          setLoading(false);
+          setMsg(data.message);
+        }
+        // console.log(data)
+        
+        // console.log(data.message)
+        console.log(msg)
     }
     return (
       <>
+       
         <div class="signin-container">
           <div class="signin-box">
             <h2>Sign in</h2>
@@ -145,7 +162,14 @@
               </button>
             </form>
           </div>
+          
         </div>
+        <div className="SignUp_msg_box_container">
+            <div className="SignUp_msg_box">
+             {loading && <div className="loader"></div>} 
+              {msg && <p>{msg}</p>}
+            </div>
+       </div>
       </>
     );
   };

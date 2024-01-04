@@ -3,18 +3,32 @@ import bcrypt from 'bcryptjs';
 export const registerUserController = async(req,res,next) =>{
     try{
         const {name,email, usn, password, scheme, branch } = req.body;
-        if(!email || !usn || !password || !scheme || !branch){
+        if(!name||!email || !usn || !password || !scheme || !branch){
             res.status(201).json({
                 message : 'Something is missing',
                 success : true,
             });
             next('something is missing');
         }
-        const existingUser = await UserModel.findOne({email})
-        if(existingUser){
-            return res.status(200).send({
+        
+        const existingEmail = await UserModel.findOne({email})
+        const existingUSN = await UserModel.findOne({usn});
+        if(existingEmail && existingUSN){
+            return res.status(300).send({
                 succcess: true,
-                message: "user already exits with this email"
+                message: "user already exits with this USN and Email"
+            })
+        }
+        if(existingUSN ){
+            return res.status(300).send({
+                succcess: true,
+                message: "user already exits with this USN"
+            })
+        }
+        if(existingEmail){
+            return res.status(300).send({
+                succcess: true,
+                message: "user already exits with this Email"
             })
         }
         const newUser={
