@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../CSS/Calculate.css";
 import ResTable from "./ResTable";
+
 const Calculate = () => {
   const [data, setData] = useState([]);
   const [branch, setBranch] = useState([]);
@@ -13,11 +14,11 @@ const Calculate = () => {
   const [BranchName, setBranchName] = useState("");
   const [scheme, setScheme] = useState();
 
-  const URL = process.env.API_KEY;
+  const URL = process.env.REACT_APP_SCHEME_API;
   try {
     useEffect(() => {
       const getSchema = async () => {
-        fetch("https://vernos-calcgpa.onrender.com/api/getScheme")
+        fetch(URL)
           .then((response) => response.json())
           .then((data) => {
             setData(data);
@@ -30,7 +31,7 @@ const Calculate = () => {
   } catch (err) {
     alert(err);
   }
-  //console.log(URL);
+  
 
   useEffect(() => {
     setCredits(subjects.map((sub) => sub.credit));

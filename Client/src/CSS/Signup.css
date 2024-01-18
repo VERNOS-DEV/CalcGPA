@@ -44,14 +44,38 @@ body {
     width: 100%;
     box-sizing: border-box; /* Ensure padding is included in width */
 }
-.loader{
-    height: 50px;
-    width: 50px;
-    border: 6px solid #e3e3e3;
+/* .loader{
+    height: 45px;
+    width: 45px;
+    border: 6px solid #7d14e6;
     border-radius: 50%;
-    border-right-color: #0470f4;
+    border-right-color: #f1f1f1;
     animation: spin 1s ease infinite;
-}
+} */
+
+.loader {
+    width: 40px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: 
+      radial-gradient(farthest-side,#ffffff 84%,#0000) top/8px 8px no-repeat,
+      conic-gradient(#0000 30%,#ffffff);
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+    animation: l13 1s infinite linear;
+  }
+  @keyframes l13{ 
+    100%{transform: rotate(1turn)}
+  }
+
+  .response-message {
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #7d14e6; /* Green background for success messages */
+  }
+/*   
 @keyframes spin {
     0%   { 
             transform: rotate(0deg) 
@@ -59,7 +83,7 @@ body {
     100% { 
             transform: rotate(360deg) 
         }
-}
+} */
 .SignUp_msg_box{
     text-align: center;
     margin-bottom: 20px;
@@ -90,6 +114,10 @@ input[type="email"],
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px; 
 }
 
 .signin-btn:hover {

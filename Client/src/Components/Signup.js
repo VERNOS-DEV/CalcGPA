@@ -1,4 +1,4 @@
-  import React, { useState } from "react";
+  import React, { useState, useEffect } from "react";
   import "../CSS/Signup.css";
   import {} from "react-router-dom";
   import Home from "./Home";
@@ -17,6 +17,9 @@
     const [errors, SetErrors] = useState({})
     const [msg, setMsg] = useState('');
     const [loading, setLoading] = useState(false);
+    const [buttonText, setButtonText] = useState('Register');
+    const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+    
 
     const handleChange = (e) => {
       const {name, value} =e.target
@@ -25,6 +28,12 @@
           [name]: name === 'scheme' ? parseInt(value, 10) : value
       })
     }
+    useEffect(() => {
+      if (msg) {
+        console.log(msg); 
+      }
+    }, [msg]);
+
     const handleSubmit =  async(e) =>{
       e.preventDefault();
       const validationErrors = {};
@@ -58,10 +67,11 @@
       }
       // console.log(formData);
       const temp = JSON.stringify({formData})
-      // console.log(temp)
       setLoading(true);
-      //https://vernos-calcgpa.onrender.com/api/registerUser
-      const response = await fetch('https://vernos-calcgpa.onrender.com/api/registerUser',{
+      
+      const endpoint = process.env.REACT_APP_REGISTER_END_POINT
+
+      const response = await fetch(endpoint,{
             method: 'POST',
             headers:{
                 'Content-Type':'application/json'
@@ -77,14 +87,34 @@
             })
         })
         const data = await response.json()
+        console.log(data);
         if(data){
-          setLoading(false);
-          setMsg(data.message);
-        }
-        // console.log(data)
-        
-        // console.log(data.message)
-        console.log(msg)
+           setLoading(false)
+           if(data.message.code==407){
+            validationErrors.email=data.message.msg1
+            validationErrors.usn=data.message.msg2
+            
+           }
+           if(data.message.code==406){
+            validationErrors.usn=data.message.msg
+           }
+           if(data.message.code==405){
+            validationErrors.email=data.message.msg
+           }
+           SetErrors(validationErrors)
+
+           if(data.message.code==200){
+            setButtonText(data.message.msg)
+            setMsg(data.message.msg);
+            setTimeout(() => {
+            setIsButtonDisabled(false)
+            setButtonText('Register')
+            setMsg('');
+            }, 8000);
+          }
+           
+           
+      }
     }
     return (
       <>
@@ -111,7 +141,7 @@
                       id="email" 
                       onChange={handleChange} />
                 <label for="email">Email</label>
-                {errors.name && <span className="error-msg">{errors.name}</span>}
+                {errors.email && <span className="error-msg">{errors.email}</span>}
               </div>
               <div class="input-box2">
                 <input 
@@ -157,21 +187,25 @@
                 <label for="password">Password</label>
                 {errors.password && <span className="error-msg">{errors.password}</span>}
               </div>
-              <button type="submit" class="signin-btn">
-                Register
-              </button>
+  
+                <button type="submit" className="signin-btn" disabled={isButtonDisabled || loading}>
+                    {loading ? <div className="loader"></div> : buttonText}
+                </button>
             </form>
+            {msg && <div className="response-message">{msg}</div>}
           </div>
           
         </div>
-        <div className="SignUp_msg_box_container">
-            <div className="SignUp_msg_box">
-             {loading && <div className="loader"></div>} 
-              {msg && <p>{msg}</p>}
-            </div>
-       </div>
+        
       </>
     );
   };
 
   export default Signup;
+
+
+  {/* <div className="SignUp_msg_box_container">
+            <div className="SignUp_msg_box"> 
+              {msg && <p>{msg}</p>}
+            </div>
+       </div> */}

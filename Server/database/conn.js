@@ -1,13 +1,19 @@
 import mongoose from "mongoose";
-const MONGODB_URL = 'mongodb+srv://CalcGPA:NVRS@cluster0.mkirhcm.mongodb.net/?retryWrites=true&w=majority'
-// const MONGODB_URL = process.env.DATABASE || "mongodb+srv://VERNOS_DEV:VERNOS.DEV@MongoDB@cluster0.s4zasri.mongodb.net/?retryWrites=true&w=majority"
-const connectDB = async () =>{
-    try{
-       const conn = await mongoose.connect(MONGODB_URL)
-            console.log("Connected to MongoDB")
-        }catch(error){
-            console.log(`MongoDB error : ${error}`)
-    }
-}
+import dotenv from 'dotenv';
 
-export default connectDB
+dotenv.config();
+
+const MONGODB_URL = process.env.DATABASE_URL;
+const connectDB = async () => {
+    try {
+        
+        await mongoose.connect(MONGODB_URL);
+        console.log("Connected to MongoDB");
+    } catch (error) {
+        console.error(`MongoDB Connection Error: ${error.message}`);
+        
+        process.exit(1);
+    }
+};
+
+export default connectDB;
