@@ -86,7 +86,27 @@ input[type="password"] {
     font-size: 16px;
 }
 
+/* When input is focused or contains text */
+.signin-container > input[type="email"]:focus + label,
+input[type="password"]:focus + label,
+input[type="email"]:valid + label,
+input[type="password"]:valid + label {
+    top: -12px;
+    font-size: 12px;
+    color: #5e5e8d;
+    background-color: white;
+    padding-left: 7px;
+    padding-right: 7px;
+}
 
+/* For input focus or when text is entered */
+.signin-container > input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="email"]:not(:placeholder-shown),
+input[type="password"]:not(:placeholder-shown) {
+    border-color: #d6d6e1;
+    /* box-shadow: 0 0 8px rgba(26, 115, 232, 0.3); */
+}
 .links {
     text-align: center;
     font-size: 14px;
@@ -157,31 +177,19 @@ input[type="password"] {
     color: red;
 }
 /* When input is focused or contains text */
-/* When input is focused or contains text */
 .signin-container input[type="text"]:focus + label,
 .signin-container input[type="email"]:focus + label,
 .signin-container input[type="password"]:focus + label,
-.signin-container input[type="text"]:not(:placeholder-shown) + label,
-.signin-container input[type="email"]:not(:placeholder-shown) + label,
-.signin-container input[type="password"]:not(:placeholder-shown) + label {
+.signin-container input[type="text"]:valid + label,
+.signin-container input[type="email"]:valid + label,
+.signin-container input[type="password"]:valid + label {
+    top: -12px;
+    font-size: 12px;
     color: #595f68;
     background-color: white;
     padding-left: 7px;
     padding-right: 7px;
 }
-
-.signin-container input[type="text"]:focus + label,
-.signin-container input[type="email"]:focus + label,
-.signin-container input[type="password"]:focus + label,
-.signin-container input[type="text"]:not(:placeholder-shown) + label,
-.signin-container input[type="email"]:not(:placeholder-shown) + label,
-.signin-container input[type="password"]:not(:placeholder-shown) + label
-{
-    top: -12px;
-    font-size: 12px;
-}
-
-
 
 
 /* Media queries for responsiveness */

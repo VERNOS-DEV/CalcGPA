@@ -149,3 +149,31 @@ input[type="password"] {
     }
    
 }
+/* .login-container input{
+    flex-basis: 100%;
+    padding: 1em;
+    border-radius: 2em;
+    border: 2px solid black;
+} */
+
+/* .signin-container label{
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    color: #5e5e8d;
+    transition: top 0.3s, font-size 0.3s;
+    pointer-events: none;
+    font-size: 16px;
+} */
+
+
+/* .login-container input:focus + label,
+.login-container input:valid + label,
+.login-container input:not(:placeholder-shown) + label{
+    top:-13px;
+    left:25px;
+    font-size: 0.8rem;
+    color: orangered;
+    transition: 0.2s ease-in;
+
+} */
