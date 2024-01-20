@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Teamlogo from "./Calculator-pana.png";
 import "../CSS/Home.css";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  const [data, setData] = useState([]);
+  const URL = process.env.REACT_APP_API_KEY;
+  try {
+    useEffect(() => {
+      const getSchema = async () => {
+        fetch(URL)
+          .then((response) => response.json())
+          .then((data) => {
+            // setData(data);
+            // console.log("DATA:::",data)
+          });
+      };
+      //console.log(data);
+      getSchema();
+    });
+  } catch (err) {
+    alert(err);
+  }
   return (
     <>
       <section className="wrapper">

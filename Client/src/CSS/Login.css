@@ -99,6 +99,7 @@ input[type="password"] {
     background-color: white;
     padding-left: 7px;
     padding-right: 7px;
+    /* z-index: 1; */
 }
 
 /* For input focus or when text is entered */
@@ -108,6 +109,7 @@ input[type="password"] {
 .login-container input[type="password"]:not(:placeholder-shown) {
     border-color: #d6d6e1;
     /* box-shadow: 0 0 8px rgba(26, 115, 232, 0.3); */
+    
 }
 .links {
     text-align: center;
