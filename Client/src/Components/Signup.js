@@ -70,7 +70,7 @@
       setLoading(true);
       
       const endpoint = process.env.REACT_APP_REGISTER_END_POINT
-      //'http://localhost:10000/api/registerUser'
+     
       const response = await fetch(endpoint,{
             method: 'POST',
             headers:{
@@ -209,3 +209,5 @@
               {msg && <p>{msg}</p>}
             </div>
        </div> */}
+
+ //'http://localhost:10000/api/registerUser'
