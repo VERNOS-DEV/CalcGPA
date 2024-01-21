@@ -45,7 +45,7 @@ export const registerUserController = async(req, res) => {
     
         return res.status(200).json({
             success: true,
-            message: {msg:"User registered successfully", code:200},
+            message: {msg:"User registered successfully", code:200, state:'positive'}
             
         });
 
